@@ -1,5 +1,9 @@
 var header = document.getElementById("header");
 
+window.onload = function (){
+    
+};
+
 window.onscroll = function(){
     if(window.pageYOffset >= this.header.offsetTop)
     {
