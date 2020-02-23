@@ -1,0 +1,28 @@
+--- 4 MAIN MODULES ---
+
+1) PoS module (web)
+
+3) PoS module (physical)
+    *Login
+    *Tareas principales: *venta de productos (por codigo de barra, o descripción)
+    *Devolución de productos
+    *Cierre de caja
+    *Cierre de sesión
+
+3) Management module
+    *Ventas
+    *Productos
+    *Envíos
+    *Fidelización: Registrarse como cliente y obtener beneficios especiales
+    *Web page config
+    *Gestión de usuarios que van a usar el punto de venta
+
+4) 3D Ecommerce + module JPG to GLTF
+
+0) App WebSite
+
+Modificaciones:
+- Modificar  el scroll en eje Z para que no deje ver el producto desde abajo
+- Agregar un piso neutro
+- Eliminar borde celeste en onClick - colocar borde gris claro
+- Para el caso en que el cliente deseare administrar el mismo sus productos, se debe crear un Product Manager

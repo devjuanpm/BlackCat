@@ -3,86 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/default.css">
-    <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
-    <link rel="icon" href="../img/favicon.png">
-    <title>Jaque mate - Indumentaria masculina</title>
+    <title>Atlantis · Plataforma de E-Commerce 3D</title>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <header class="header" id="header">
+    <header id="header">
         <div class="wrapper">
-            <div class="logo-area">
-                <img src="../img/logo.png" alt="">
-                <h3>JAQUE MATE</h4>
-                <p>Indumentaria masculina</p>
-            </div>
-
-            <nav class="navigation">
-                <ul class="menu">
-                <li><a href="">Vestimenta</a>
-                    <ul class="submenu">
-                        <li><a href="">Camisas</a></li>
-                        <li><a href="">Camisetas</a></li>
-                        <li><a href="">Pantalones</a></li>
-                        <li><a href="">Shorts</a></li>
-                    </ul></li>
-                <li><a href="">Calzado</a></li>
-                <li><a href="">Accesorios</a></li>
-                <li><a href="">Fragancias</a></li>
-            </ul>
+            <img src="../img/icon-logo.png" alt="logo" id="logo">
+            <nav id="nav-bar">
+                <ul id="menu-bar">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#producto">Producto</a></li>
+                    <li><a href="#planes">Planes</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
         </nav>
-            <img id="icon-search" src="../img/icon-search.png" alt="icon-search">
-            <input id="search-bar" type="text">
         </div>
+
+        <img src="../img/icon-menu.png" alt="burger" id="burger">
     </header>
 
-    <div class="slider-area">
-        <img src="../img/icon-arrow-left.png" alt="icon-arrow-left" id="arrow-left">
-        <img src="../img/icon-arrow-right.png" alt="icon-arrow-right" id="arrow-right">
-        <img class="slides" src="../img/sample-1.png" alt="img-sample-1">
-        <!-- <img class="slides" src="../img/sample-2.png" alt="img-sample-2">
-        <img class="slides" src="../img/sample-3.png" alt="img-sample-3"> -->
-    </div>
-
-    <div class="box-content">
-        <!-- <div class="card-1">
-            <a href="./threejs.html">
-                <div class="product-area">
-                    <img src="../3d/shirt/thumbnail-001.gif" alt="">
+    <section id="inicio">
+        <div id="banner">   
+            <div id="wrapper">
+                <div id="image"></div>
+                <div id="slider-content">
+                    <div id="slider-1" class="sliders">
+                        <p id="caption">Lleve la experiencia de compra<br>al siguiente nivel</p>
+                        <p id="sub-caption">Todo lo que necesita para desarrollar su <br>negocio online de forma efectiva</p>
+                    </div>
+                    <div id="slider-2" class="sliders">
+                        <p id="caption">Innove como nunca antes</p>
+                        <p id="sub-caption">Ofrezca una experiencia de compra <br>totalmente personalizable</p>
+                    </div>
+                    <div id="slider-3" class="sliders">
+                        <p id="caption">Despreocúpese</p>
+                        <p id="sub-caption">Encárguese de vender <br>Nosotros nos ocupamos del resto</p>
+                    </div>
+                    <p id="button">Me interesa</p>
                 </div>
-                <div class="product-description">
-                    <p class="description">Camiseta básica de hombre negra</label>
-                    <p class="price">U$S 125</label>
-                </div>
-            </a>
-            </div>
-            <div class="card-2">
-                <div class="product-area">
-                    <img src="../3d/shirt/thumbnail-001.gif" alt="">
-                </div>
-                <div class="product-description">
-                </div>
-        </div>
-        <div class="card-3">
-            <div class="product-area">
-                    <img src="../3d/shirt/thumbnail-001.gif" alt="">
-            </div>
-            <div class="product-description">
-        
             </div>
         </div>
-        <div class="card-4">
-            <div class="product-area">
-                    <img src="../3d/shirt/thumbnail-001.gif" alt="">
-            </div>
-            <div class="product-description">
-        
-            </div>
-        </div> -->
-    </div>
+    </section>
 
+    <p id="legend">
+        Todo lo que necesita en una única plataforma: <br><b>moderna, segura y eficiente</b>
+    </p>
+    
+    <section id="producto" style="height: 1500px">
 
-    <script src="../js/index.js"></script
+    </section>
+
+    <section id="planes">
+        <div id="basic">
+            <h3>Básico</h3>
+                <li>Diseño personalizado</li>
+                <li title="Su sitio web se verá estupendo desde cualquier dispositivo">Sitio responsive</li>
+                <li>Hasta 100 productos</li>
+                <li>Soporte mail</li>
+            <h4 title="Cancele en cualquier momento">U$S 250 al mes</h4>
+            <p>Póngase en contacto</p>
+        </div>
+        <div id="pro">
+            <h3>Pro</h3>
+                <li>Diseño personalizado</li>
+                <li>Sitio responsive</li>
+                <li>Productos ilimitados</li>
+                <li>Soporte dedicado</li>
+            <h4>U$S 500 al mes</h4>
+            <p>Póngase en contacto</p>
+        </div>
+    </section>
+
+    <footer>
+        <div id="wrapper-footer">
+            <p id="footer-legend">2020. Todos los derechos reservados. Hecho en Uruguay</p>
+            <img src="../img/uruguay-flag-icon.png" alt="uruguay-flag" id="flag">
+        </div>
+    </footer>
+
+    
+    <script defer src="../js/index.js"></script>
 </body>
 </html>
