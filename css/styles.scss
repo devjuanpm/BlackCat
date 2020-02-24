@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import "./animations";
 
 $primary-color: rgb(45, 60, 100);
 $secondary-color: rgb(110, 240, 240);
@@ -83,75 +84,100 @@ $secondary-color: rgb(110, 240, 240);
     position: relative;
     height: 600px;
 
-    #image{
-        position: absolute;
-        left: 10%;
+    #wrapper{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 70%;
+        height: 100%;
+
+        #image{
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 500px;
+            height: 500px;
+            background: url('../img/shirt-demo.png');
+            object-fit: cover;
+            animation: showUp 15s infinite;
+        }
+    }
+
+    #slider-content{
+        position: relative;
         top: 50%;
+        left: 60%;
         transform: translate(0, -50%);
         width: 500px;
         height: 500px;
-        background: url('../img/shirt-demo.png');
-        object-fit: cover;
-        animation: showUp 15s infinite;
+
+        #caption{
+            position: absolute;
+            width: 400px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            top: 15%;
+            font-size: 1.6rem;
+            font-family: 'Raleway', sans-serif;
+            color: rgb(45, 60, 100);
+            animation: showUp 7s infinite;
+        }
+        
+        #sub-caption{
+            font-family: 'Raleway', sans-serif;
+            color: rgb(45, 60, 100);
+            font-size: 1.2rem;
+            position: absolute;
+            left: 10%;
+            top: 40%;
+            animation: showUp 7s infinite;
+        }
+
+        #button{
+            width: 200px;
+            line-height: 20px;
+            position: absolute;
+            left: 30%;
+            transform: translate(-50%, 0);
+            bottom: 20%;
+            font-size: 1.2rem;
+            font-family: 'Raleway', sans-serif;
+            background-color: rgb(45, 60, 100);
+            padding: 1rem;
+            text-align: center;
+            color: #fff;
+            letter-spacing: 1px;
+            animation: appearUp 2s 1;
+        }
+        
+        #button:hover{
+            cursor: pointer;
+            transition: all .4s;
+            background-color: rgb(91, 207, 207);
+        }
+
+        #slider-2, #slider-3{
+            display: none;
+        }
+        
     }
 }
 
-#slider-content{
-    position: relative;
-    top: 50%;
-    left: 60%;
-    transform: translate(0, -50%);
-    width: 500px;
-    height: 500px;
-}
-
-#slider-2, #slider-3{
-    display: none;
-}
-
-#caption{
+#legend{
+    margin-top: 4rem;
+    width: 100%;
+    padding: 2.5rem;
     position: absolute;
-    width: 400px;
     left: 50%;
     transform: translate(-50%, 0);
-    top: 15%;
-    font-size: 1.6rem;
     font-family: 'Raleway', sans-serif;
-    color: rgb(45, 60, 100);
-    animation: showUp 7s infinite;
-}
-
-#sub-caption{
-    font-family: 'Raleway', sans-serif;
-    color: rgb(45, 60, 100);
-    font-size: 1.2rem;
-    position: absolute;
-    left: 10%;
-    top: 40%;
-    animation: showUp 7s infinite;
-}
-
-#button{
-    width: 200px;
-    line-height: 20px;
-    position: absolute;
-    left: 30%;
-    transform: translate(-50%, 0);
-    bottom: 20%;
-    font-size: 1.2rem;
-    font-family: 'Raleway', sans-serif;
-    background-color: rgb(45, 60, 100);
-    padding: 1rem;
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 1.7rem;
     text-align: center;
-    color: #fff;
-    letter-spacing: 1px;
-    animation: appearUp 2s 1;
-}
-
-#button:hover{
-    cursor: pointer;
-    transition: all .4s;
-    background-color: rgb(91, 207, 207);
+    font-style: italic;
+    color: rgb(45, 60, 100);
 }
 
 footer{
@@ -254,16 +280,6 @@ footer{
     }
 }
 
-
-#wrapper{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 70%;
-    height: 100%;
-}
-
-
 .sticky {
     position: fixed;
     width: 100%;
@@ -279,52 +295,11 @@ footer{
 
 .content {
     padding: 16px;
-   }
-
-   .sticky + .content {
-     padding-top: 60px;
 }
 
-  #legend{
-    margin-top: 4rem;
-    width: 100%;
-    padding: 2.5rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    letter-spacing: 3px;
-    line-height: 1.7rem;
-    text-align: center;
-    font-style: italic;
-    color: rgb(45, 60, 100);
-  }
-
-@keyframes showUp {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
+.sticky + .content {
+    padding-top: 60px;
 }
 
-@keyframes showUpOnly {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:1;}
-}
 
-@keyframes appearUp{
-    0% {margin-bottom: -125px; opacity: 0;}
-    25% {opacity: 0;}
-    50% {opacity: 1;}
-    75% {opacity: 1;}
-    100% {margin-bottom: 0; opacity: 1;}
-}
 
-@media (max-width: 920px){
-    #header #burger{
-        display: block;
-    }
-}
