@@ -20,6 +20,14 @@
     100% {margin-bottom: 0; opacity: 1;}
 }
 
+@keyframes appearDown {
+    0% {margin-top: -200px;}
+    25% {}
+    50% {}
+    75% {}
+    100% {margin-top: 0}
+}
+
 @media (max-width: 920px){
     #header #burger{
         display: block;

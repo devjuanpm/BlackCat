@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlantis · Plataforma de E-Commerce 3D</title>
+    <title>Atlantis · Plataforma de E-Commerce con visualización 3D</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header id="header">
         <div class="wrapper">
-            <img src="../img/icon-logo.png" alt="logo" id="logo">
+            <img src="" alt="logo" id="logo">
             <nav id="nav-bar">
                 <ul id="menu-bar">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#producto">Producto</a></li>
-                    <li><a href="#planes">Planes</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li><a href="#inicio" class="menu-item">Inicio</a></li>
+                    <li><a href="#producto" class="menu-item">Producto</a></li>
+                    <li><a href="#planes" class="menu-item">Planes</a></li>
+                    <li><a href="" onclick="showModal()">Contacto</a></li>
                 </ul>
         </nav>
         </div>
@@ -24,8 +24,8 @@
     </header>
 
     <section id="inicio">
-        <div id="banner">   
-            <div id="wrapper">
+        <div class="wrapper">
+            <div id="banner">   
                 <div id="image"></div>
                 <div id="slider-content">
                     <div id="slider-1" class="sliders">
@@ -40,16 +40,17 @@
                         <p id="caption">Despreocúpese</p>
                         <p id="sub-caption">Encárguese de vender <br>Nosotros nos ocupamos del resto</p>
                     </div>
-                    <p id="button">Me interesa</p>
+                    <p id="button" onclick="showModal()">Me interesa</p>
                 </div>
             </div>
         </div>
     </section>
 
     <p id="legend">
-        Todo lo que necesita en una única plataforma: <br><b>moderna, segura y eficiente</b>
+        Todo lo que necesita en una única plataforma: 
+        <br><b>moderna, segura y eficiente</b>
     </p>
-    
+
     <section id="producto" style="height: 1500px">
 
     </section>
@@ -75,10 +76,21 @@
         </div>
     </section>
 
+    <div id="modal" class="modal">
+        <div class="modalContent">
+            <img src="../img/close.png" alt="close" id="btn-close">
+            <div class="buttons-container">
+                <p class="buttons">Cancelar</p>
+                <p class="buttons">Enviar</p>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div id="wrapper-footer">
             <p id="footer-legend">2020. Todos los derechos reservados. Hecho en Uruguay</p>
             <img src="../img/uruguay-flag-icon.png" alt="uruguay-flag" id="flag">
+            
         </div>
     </footer>
 

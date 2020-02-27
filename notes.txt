@@ -26,3 +26,10 @@ Modificaciones:
 - Agregar un piso neutro
 - Eliminar borde celeste en onClick - colocar borde gris claro
 - Para el caso en que el cliente deseare administrar el mismo sus productos, se debe crear un Product Manager
+
+
+
+MODS - header sticky too agresive
+    - implement menu li clicks
+    - logo
+    - producto section

@@ -1,5 +1,76 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
+#header {
+  overflow: hidden;
+  height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#logo {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+#burger {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 5rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+#nav-bar {
+  width: 100%;
+  height: 2.3rem;
+}
+
+#menu-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+#menu-bar li {
+  width: 7rem;
+  line-height: 3.5rem;
+  text-align: center;
+}
+
+#menu-bar li:hover {
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  background-color: #2d3c64;
+}
+
+#menu-bar li:hover a {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  color: #fff;
+}
+
+#menu-bar li a {
+  font-size: 19px;
+  color: #2d3c64;
+  font-family: 'Raleway', sans-serif;
+}
+
 @-webkit-keyframes showUp {
   0% {
     opacity: 0;
@@ -14,6 +85,7 @@
     opacity: 0;
   }
 }
+
 @keyframes showUp {
   0% {
     opacity: 0;
@@ -99,97 +171,47 @@
   }
 }
 
+@-webkit-keyframes appearDown {
+  0% {
+    margin-top: -200px;
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes appearDown {
+  0% {
+    margin-top: -200px;
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 920px) {
   #header #burger {
     display: block;
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-decoration: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#header {
-  overflow: hidden;
-  height: 3.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#header .wrapper {
+.wrapper {
   position: relative;
+  margin: 0 auto;
   width: 70%;
   height: 100%;
-  margin: 0 auto;
-}
-
-#header .wrapper #logo {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
-#header .wrapper #logo:hover {
-  cursor: pointer;
-}
-
-#header #burger {
-  display: none;
-  position: absolute;
-  top: 50%;
-  right: 5rem;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
-#nav-bar {
-  width: 100%;
-  height: 2.3rem;
-}
-
-#menu-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 70%;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-
-#menu-bar li {
-  width: 7rem;
-  line-height: 3.5rem;
-  text-align: center;
-}
-
-#menu-bar li:hover {
-  -webkit-transition: all .6s;
-  transition: all .6s;
-  background-color: #2d3c64;
-}
-
-#menu-bar li:hover a {
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  color: #fff;
-}
-
-#menu-bar li a {
-  font-size: 19px;
-  color: #2d3c64;
-  font-family: 'Raleway', sans-serif;
 }
 
 #banner {
@@ -197,23 +219,15 @@
   height: 600px;
 }
 
-#banner #wrapper {
-  position: relative;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  width: 70%;
-  height: 100%;
-}
-
-#banner #wrapper #image {
+#image {
   position: absolute;
-  left: 10%;
+  left: 0%;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  width: 500px;
-  height: 500px;
+  width: 60%;
+  height: 90%;
+  margin-left: 1rem;
   background: url("../img/shirt-demo.png");
   -o-object-fit: cover;
      object-fit: cover;
@@ -221,7 +235,7 @@
           animation: showUp 15s infinite;
 }
 
-#banner #slider-content {
+#slider-content {
   position: relative;
   top: 50%;
   left: 60%;
@@ -231,7 +245,7 @@
   height: 500px;
 }
 
-#banner #slider-content #caption {
+#caption {
   position: absolute;
   width: 400px;
   left: 50%;
@@ -245,7 +259,7 @@
           animation: showUp 7s infinite;
 }
 
-#banner #slider-content #sub-caption {
+#sub-caption {
   font-family: 'Raleway', sans-serif;
   color: #2d3c64;
   font-size: 1.2rem;
@@ -256,7 +270,7 @@
           animation: showUp 7s infinite;
 }
 
-#banner #slider-content #button {
+#button {
   width: 200px;
   line-height: 20px;
   position: absolute;
@@ -275,25 +289,24 @@
           animation: appearUp 2s 1;
 }
 
-#banner #slider-content #button:hover {
+#button:hover {
   cursor: pointer;
   -webkit-transition: all .4s;
   transition: all .4s;
   background-color: #5bcfcf;
 }
 
-#banner #slider-content #slider-2, #banner #slider-content #slider-3 {
+#slider-2, #slider-3 {
   display: none;
 }
 
 #legend {
-  margin-top: 4rem;
-  width: 100%;
-  padding: 2.5rem;
+  width: 70%;
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  top: 80%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   letter-spacing: 3px;
@@ -301,46 +314,6 @@
   text-align: center;
   font-style: italic;
   color: #2d3c64;
-}
-
-footer {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  background-color: #2d3c64;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#footer-legend {
-  width: 100%;
-  line-height: 50px;
-  color: #fff;
-  position: absolute;
-  bottom: 0%;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-}
-
-#wrapper-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#flag {
-  position: absolute;
-  bottom: 2%;
-  right: 35%;
-  width: 42px;
-  height: 42px;
-}
-
-#logo {
-  position: absolute;
-  width: 60px;
-  height: 50px;
 }
 
 #planes {
@@ -414,24 +387,104 @@ footer {
   background-color: #00c800;
 }
 
-.sticky {
+.modal {
+  display: none;
   position: fixed;
-  width: 100%;
-  top: 0;
-  background-color: #2d3c64;
-  opacity: 90%;
   z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-.sticky-white-font {
+.modalContent {
+  -webkit-box-shadow: 4px 4px 4px 4px #4b4b4b;
+          box-shadow: 4px 4px 4px 4px #4b4b4b;
+  width: 60rem;
+  height: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  -webkit-animation: appearDown 1.5s 1;
+          animation: appearDown 1.5s 1;
+}
+
+#btn-close {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+#btn-close:hover {
+  cursor: pointer;
+}
+
+.buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: #2d3c64;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer-legend {
+  width: 100%;
+  line-height: 50px;
   color: #fff;
+  position: absolute;
+  bottom: 0%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
-.content {
-  padding: 16px;
+#wrapper-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.sticky + .content {
-  padding-top: 60px;
+#flag {
+  position: absolute;
+  bottom: 2%;
+  right: 35%;
+  width: 42px;
+  height: 42px;
+}
+
+#logo {
+  position: absolute;
+  width: 60px;
+  height: 50px;
 }
 /*# sourceMappingURL=styles.css.map */
