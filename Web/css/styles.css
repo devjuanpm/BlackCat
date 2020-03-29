@@ -9,8 +9,8 @@
 }
 
 #logo {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   position: absolute;
   top: 50%;
   left: 0%;
@@ -40,16 +40,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
+  width: auto;
   position: absolute;
-  left: 50%;
+  right: 0%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 
 #menu-bar li {
-  width: 7rem;
-  line-height: 3.5rem;
+  width: 6rem;
+  line-height: 3rem;
   text-align: center;
 }
 
@@ -66,9 +66,27 @@
 }
 
 #menu-bar li a {
-  font-size: 19px;
+  font-size: 18px;
   color: #2d3c64;
   font-family: 'Raleway', sans-serif;
+}
+
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #6ef0f0;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 @-webkit-keyframes showUp {
@@ -171,6 +189,36 @@
   }
 }
 
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes appearDown {
   0% {
     margin-top: -200px;
@@ -214,6 +262,24 @@
   height: 100%;
 }
 
+#header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#logo-p {
+  color: #2d3c64;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 4rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 #banner {
   position: relative;
   height: 600px;
@@ -228,7 +294,6 @@
   width: 60%;
   height: 90%;
   margin-left: 1rem;
-  background: url("../img/shirt-demo.png");
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-animation: showUp 15s infinite;
@@ -293,7 +358,7 @@
   cursor: pointer;
   -webkit-transition: all .4s;
   transition: all .4s;
-  background-color: #5bcfcf;
+  background-color: #6ef0f0;
 }
 
 #slider-2, #slider-3 {

@@ -1,6 +1,15 @@
 var modal = document.getElementById('modal');
+var header = document.getElementById('header');
+var sticky = header.offsetTop+200;
 
 window.onscroll = function() {
+
+  if(window.pageYOffset >= sticky){
+    this.header.classList.add('sticky');
+    this.header.style.animation = ' appearUp 2s 1';
+  } else{
+    this.header.classList.remove('sticky');
+  }
 
   if(window.pageYOffset >= 1600){
     var basic = document.getElementById('basic');

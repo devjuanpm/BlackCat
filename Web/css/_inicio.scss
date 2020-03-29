@@ -4,6 +4,21 @@
     width: 70%;
     height: 100%;
 }
+
+#header .wrapper{
+    display: flex;
+}
+
+#logo-p{
+    color: $primary-color;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 4rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
     
 #banner {
     position: relative;
@@ -18,7 +33,6 @@
     width: 60%;
     height: 90%;
     margin-left: 1rem;
-    background: url('../img/shirt-demo.png');
     object-fit: cover;
     animation: showUp 15s infinite;
 }
@@ -40,13 +54,13 @@
     top: 15%;
     font-size: 1.6rem;
     font-family: 'Raleway', sans-serif;
-    color: rgb(45, 60, 100);
+    color: $primary-color;
     animation: showUp 7s infinite;
 }
         
 #sub-caption{
     font-family: 'Raleway', sans-serif;
-    color: rgb(45, 60, 100);
+    color: $primary-color;
     font-size: 1.2rem;
     position: absolute;
     left: 10%;
@@ -63,7 +77,7 @@
     bottom: 20%;
     font-size: 1.2rem;
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(45, 60, 100);
+    background-color: $primary-color;
     padding: 1rem;
     text-align: center;
     color: #fff;
@@ -74,7 +88,7 @@
 #button:hover{
     cursor: pointer;
     transition: all .4s;
-    background-color: rgb(91, 207, 207);
+    background-color: $secondary-color;
 }
 
 #slider-2, #slider-3{
