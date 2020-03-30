@@ -4,3 +4,6 @@ Modificaciones:
 - Agregar un piso neutro
 - Eliminar borde celeste en onClick - colocar borde gris claro
 - Para el caso en que el cliente deseare administrar el mismo sus productos, se debe crear un Product Manager
+
+
+Las luces deben ser manejadas directamente en THREE JS

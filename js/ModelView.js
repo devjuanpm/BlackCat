@@ -1,9 +1,9 @@
 let scene, camera, renderer, loader;
 function init() {
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xffffff);
+    scene.background = new THREE.Color(0x00ffff);
 
-    camera = new THREE.PerspectiveCamera(40, 1920 / 1080, 1, 5000);
+    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
     camera.rotation.z = 90;
     camera.position.x = 700;
     camera.position.y = 0;
@@ -42,7 +42,7 @@ function init() {
     };
     
     loader = new THREE.GLTFLoader();
-    loader.load('../3d/gltf/sony-smart-tv.gltf', function (gltf) {
+    loader.load('../3d/gltf/tv.gltf', function (gltf) {
         let object = gltf.scene.children[0];
         object.scale.set(0.5, 0.5, 0.5);
         object.position.set(0, 0, 0);
