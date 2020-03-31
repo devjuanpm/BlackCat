@@ -1,14 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid black;
+    
 }
 
 #main-container {
-    
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 75%;
+    display: flex;
+    animation: FadeIn 2s 1;
+    border: 1px solid black;
 }
 
 #model-container {
-    
+    width: 841px;
+    height: 475px;
+}
+
+#product-description {
+    padding: 2rem;
+    border-left: 3px solid black;
+}
+
+#product-description #title {
+    font-family: 'Roboto', sans-serif;
+}
+
+#product-description #price {
+    margin-top: 10rem;
+}
+
+#product-description #btnComprar {
+    margin-top: 3rem;
+    width: 10rem;
+    height: 3rem;
+    background-color: rgb(18, 150, 18);
+    color: #fff;
+    border-radius: 3px;
+    font-size: larger;
+    text-align: center;
+    line-height: 3rem;
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

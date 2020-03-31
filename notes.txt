@@ -2,8 +2,8 @@ DEMO
 Modificaciones:
 - Modificar  el scroll en eje Z para que no deje ver el producto desde abajo
 - Agregar un piso neutro
-- Eliminar borde celeste en onClick - colocar borde gris claro
-- Para el caso en que el cliente deseare administrar el mismo sus productos, se debe crear un Product Manager
+-probar distintos tipos de luces (three js)
+-cargar mas objetos
+-decidir ropa o art. electronicos
+-photoscanning
 
-
-Las luces deben ser manejadas directamente en THREE JS
