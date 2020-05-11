@@ -7,6 +7,15 @@
     
 }
 
+header {
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(90deg, rgba(20,200,115,1) 0%, rgba(190,210,195,1) 100%);
+}
+
+
+/*------------------model view test.html----------------------------*/
+
 #main-container {
     position: absolute;
     top: 10%;
